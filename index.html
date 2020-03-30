@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+	<link rel='stylesheet' type='text/css' href='css/style.css'>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	 <link href="css/all.css" rel="stylesheet"> <!-- it will load all the icons of FAICONS -->
+	<!-- <script src="https://unpkg.com/github-card@1.2.1/dist/widget.js"></script> -->
+	<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+window.onload = () => {
+	document.getElementById("clock").innerHTML = getTime();
+            // Set clock interval to tick clock
+            setInterval( () => {
+                document.getElementById("clock").innerHTML = getTime();
+            },100);
+}
+
+function getTime() {
+            let date = new Date(),
+                min = date.getMinutes(),
+                sec = date.getSeconds(),
+                hour = date.getHours();
+
+            return "" +
+                (hour < 10 ? ("0" + hour) : hour) + ":" +
+                (min < 10 ? ("0" + min) : min) + ":" +
+                (sec < 10 ? ("0" + sec) : sec);
+        }
+
+				function search(e) {
+			            if (e.keyCode == 13) {
+			                var val = document.getElementById("search-field").value;
+			                window.open("https://google.com/search?q=" + val);
+			            }
+			        }
+				function you_search(e){
+					if (e.keyCode == 13) {
+							var val = document.getElementById("you_search-field").value;
+							window.open("https://www.youtube.com/results?search_query=" + val);
+					}
+				}
+</script>
+</head>
+<body class='bg-secondary text-black'>
+<div name='navbar'>
+
+</div>
+
+<div name='body'>
+
+</div>
+
+
+
+<!-- header -->
+<haeder class="page-footer font-small">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 py-5 text-center">
+        <div class="mb-5 flex-center links">
+
+					<!-- tensorflow -->
+					<a class="fb-ic" href='https://www.tensorflow.org/' target="_blank">
+            <i class="fab fa-gg fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+					<!-- Github -->
+					<a class="fb-ic" href='https://www.github.com' target="_blank">
+            <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Facebook -->
+          <a class="fb-ic" href='https://www.facebook.com' target="_blank">
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic" href='https://www.twitter.com' target='_blank'>
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic" href='https://www.linkedin.com' target='_blank'>
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic" href='https://www.instagram.com' target='_blank'>
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic" href='https:://www.pinterest.com'>
+            <i class="fab fa-pinterest fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+					<!-- Quora -->
+					<a class="ins-ic" href='https://www.quora.com' target='_blank'>
+            <i class="fab fa-quora fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+					<!-- medium -->
+					<a class="fb-ic" href='https://www.medium.com/' target="_blank">
+            <i class="fab fa-medium fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+        </div>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+</header>
+<div class='container'>
+	<div class='row'>
+		<div class='col-sm'>
+			<h1 class='text-center font-weight-bold text-warning'>Links</h1><hr />
+			<div class='links linked_url'>
+				<a class='text-center text-light' href='https://kathmandupost.com/'>The Kathmandu Post</a><br /><br />
+				<a class='text-center text-light' href='https://www.sharesansar.com/'>Share Sansar Nepal</a><br /><br />
+				<a class='text-center text-light' href='https://www.worldometers.info/coronavirus/#countries'>Corona Update</a><br /><br />
+				<a class='text-center text-light' href='https://www.cnet.com/news/'>Cnet</a><br /><br />
+				<a class='text-center text-light' href='https://www.bbc.com/news/technology'>BBC Technology</a><br /><br />
+			</div>
+
+
+		</div>
+		<div class='col-sm'>
+			<!-- to be written -->
+		<h1 id="clock" class='text-center font-weight-bold text-warning'></h1><hr />
+		<div class="d-flex justify-content-center">
+        <div class="searchbar">
+          <input id="search-field" class="search_input" type="text" name="" onkeypress="return search(event)" placeholder="Google Search...">
+					<a href="#" class="search_icon text-success"><i class="fas fa-search"></i></a>
+        </div>
+      </div>
+			<hr />
+			<div class="d-flex justify-content-center">
+	        <div class="searchbar">
+	          <input id="you_search-field" class="search_input" type="text" name="" onkeypress="return you_search(event)" placeholder="Youtube Search...">
+						<a href="#" class="search_icon text-danger"><i class="fas fa-search"></i></a>
+	        </div>
+	      </div>
+
+
+		</div>
+		<div class='col-sm'>
+			<!-- code to be written -->
+			<iframe src="https://www.hamropatro.com/widgets/calender-medium.php" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" style="border:none; overflow:hidden; width:295px; height:385px;" allowtransparency="true"></iframe>
+		</div>
+	</div>
+
+
+<a class="weatherwidget-io" href="https://forecast7.com/en/27d6785d29/chobhar/" data-label_1="CHOBHAR" data-label_2="WEATHER" data-theme="original" >CHOBHAR WEATHER</a>
+</div>
+<!-- Footer -->
+</body>
+</html>
